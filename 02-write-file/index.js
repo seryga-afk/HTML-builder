@@ -12,21 +12,21 @@ rl.write('Please enter text!\n');
 
 
 rl.on('line', (text) => {
-    if (text.trim() === 'exit'){
-        rl.close();
-    } 
+  if (text.trim() === 'exit'){
+    rl.close();
+  } 
   
-    textOut.write(text + "\n");
+  textOut.write(text + '\n');
 });
 
 rl.on('close', () => {
-    process.exit();
+  process.exit();
 });
 
 process.on('exit', code => {
-if (code === 0) {
+  if (code === 0) {
     console.log('Thank you for your attention!');
-} else {
+  } else {
     console.log(`Something went wrong ${code}`);
-}
+  }
 });
